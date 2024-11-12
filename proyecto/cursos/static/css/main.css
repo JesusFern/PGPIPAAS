@@ -1,0 +1,155 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .search-bar {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-icons .icon {
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons .icon i {
+    margin-right: 8px;
+}
+
+/* Sección de cursos */
+.courses-section {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.courses-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4c6f8c;
+}
+
+/* Lista de cursos */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card de cada curso */
+.course-card {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Estilo del campo de búsqueda */
+.search-bar {
+    width: 250px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del botón */
+.welcome-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4c6f8c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-btn:hover {
+    background-color: #3b5d75;
+}
+
+/* Respuesta en caso de que no haya cursos */
+.course-list p {
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .course-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        width: 100%;
+    }
+}

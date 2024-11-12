@@ -74,12 +74,21 @@ WSGI_APPLICATION = 'proyecto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# settings.py
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # Usa el backend de MySQL
+        'NAME': 'dbpgpipaas',
+        'USER': 'pgpipaas_user',
+        'PASSWORD': 'pgpipaas_password',
+        'HOST': 'localhost',  # O la IP de tu servidor de MariaDB si está en otro lugar
+        'PORT': '3306',       # Puerto predeterminado para MariaDB
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
+
 
 
 # Password validation
