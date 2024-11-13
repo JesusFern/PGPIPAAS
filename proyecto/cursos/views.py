@@ -1,7 +1,14 @@
+# views.py
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Curso
 
 def home(request):
-    context = {}
-    return render(request, "cursos/home.html", context)
+    # Obtener todos los cursos de la base de datos
+    cursos = Curso.objects.all()  # Esto obtiene todos los cursos
+
+    # Pasar los cursos al contexto de la plantilla
+    context = {
+        'cursos': cursos,
+    }
+    
+    return render(request, 'cursos/home.html', context)
