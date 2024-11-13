@@ -29,6 +29,13 @@ Ahora dentro del entorno virtual
     FLUSH PRIVILEGES;
 
 
+MIGRATION
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+
 SEEDS
 - Escribir el codigo para introducir en los seeds
 - Para hacer el seed "python seed_data.py"
